@@ -1,8 +1,6 @@
-# Banh-Chung-Banh-Giay-Calculator
-
 # Banh Chung & Banh Giay Calculator
 
-A C program that calculates the optimal number of Banh Chung (square sticky rice cake) and Banh Giay (round sticky rice cake) that can be made based on given ingredients and weather conditions. This program is based on the Vietnamese legend of Lang Lieu and the origin of these traditional cakes.
+This is a product I developed during my time at university to that calculates the optimal number of Banh Chung (square sticky rice cake) and Banh Giay (round sticky rice cake) that can be made based on given ingredients and weather conditions. This program is based on the Vietnamese legend of Lang Lieu and the origin of these traditional cakes.
 
 ## Problem Description
 Given an amount of sticky rice, leaf wrappings, and dimensions for both types of cakes, calculate the optimal number of each cake that can be made while:
