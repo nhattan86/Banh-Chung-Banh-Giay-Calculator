@@ -94,3 +94,109 @@ Returns `-1 -1 n` when:
 - n > 1000
 - ld < 1 or ld > 300
 - Invalid weather condition
+
+# GUI version of Banh Chung & Banh Giay Calculator
+
+## Overview
+The GUI Banh Chung & Banh Giay Calculator is a desktop application built with Qt that performs weather-based calculations. It provides a graphical user interface for inputting weather parameters and viewing results. The application processes various weather conditions (Rain, Sun, Cloud, Fog, and Wind) and calculates specific metrics based on the input parameters.
+
+## Prerequisites
+Before installing the Weather Calculator, ensure you have the following installed on your system:
+
+- Qt 6.x or later
+- MinGW C++ compiler (64-bit)
+- Git (optional, for version control)
+
+## Installation
+
+### Setting Up the Development Environment
+
+1. Install Qt:
+   - Download the Qt Online Installer from https://www.qt.io/download-qt-installer
+   - Run the installer and select the following components:
+     - Qt 6.x for MinGW
+     - Qt Creator
+     - MinGW compiler
+
+2. Configure System Environment:
+   - Add Qt binary directory to your system PATH:
+     ```
+     C:\Qt\6.x.x\mingw_64\bin
+     C:\Qt\Tools\mingw1120_64\bin
+     ```
+
+### Building the Project
+
+1. Clone or download the project files to your local machine
+
+2. Open a Command Prompt in the project directory
+
+3. Generate the Makefile:
+   ```bash
+   qmake weather-calculator.pro
+   ```
+
+4. Build the project:
+   ```bash
+   mingw32-make
+   ```
+
+5. The executable will be generated in the debug or release folder
+
+## Usage
+
+1. Launch the application by running the executable
+
+2. Enter the following parameters in the input fields:
+   - N: Primary calculation value (must be ≤ 1000)
+   - DC: First dimensional constant
+   - DG: Second dimensional constant
+   - LD: Limit value (must be between 1 and 300)
+
+3. Select the weather condition from the dropdown menu:
+   - Rain
+   - Sun
+   - Cloud
+   - Fog
+   - Wind
+
+4. Click the "Calculate" button to process the inputs
+
+5. View the results displayed at the bottom of the window in the format:
+   ```
+   Result: [BC] [BG] [ND]
+   ```
+   where BC and BG are calculated values, and ND is the final metric
+
+## Project Structure
+
+- `main.cpp`: Application entry point
+- `mainwindow.h`: Header file containing class declarations
+- `mainwindow.cpp`: Implementation of the MainWindow class and calculation logic
+- `weather-calculator.pro`: Qt project file containing build configurations
+
+## Error Handling
+
+The application includes validation for:
+- Invalid input values
+- Out-of-range parameters
+- Non-numeric inputs
+- Boundary conditions
+
+Error messages will be displayed in a popup dialog when invalid inputs are detected.
+
+## Maintenance and Support
+
+For bug reports and feature requests, please create an issue in the project repository. When reporting issues, include:
+- Steps to reproduce the problem
+- Expected behavior
+- Actual behavior
+- Screenshots (if applicable)
+
+## Technical Notes
+
+- Built using Qt 6 framework
+- Implements C++17 features
+- Uses the Qt Widgets module for GUI components
+- Calculations use double precision floating-point arithmetic
+- PI constant defined as 3.1415926535
